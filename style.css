@@ -1,3 +1,155 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap"); /* Variables */
+:root {
+  /* Primary */
+  --clr-primary-1: #e0e8ff;
+  --clr-primary-2: #3829e0; /*#463AA8*/
+  /* Neutral */
+  --clr-very-pale-blue: #f5f7ff;
+  --clr-desaturated-blue: #7280a7; /*F8F9FE*/
+  --clr-dark-blue: #1f2f56;
+  --ff-primary: "Red Hat Display", sans-serif;
+  --spacing: 0.25rem;
+  --radius: 1.5rem;
+  --transition: all 0.5s linear;
+}
+/* Global Styles */
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-primary);
+  font-size: 16px;
+  background-color: var(--clr-primary-1);
+}
+.bg {
+  z-index: -1;
+  height: 400px;
+  position: absolute;
+  background: url(images/pattern-background-mobile.svg) no-repeat center/cover;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+}
+@media screen and (min-width: 500px) {
+  .bg {
+    background: url(images/pattern-background-desktop.svg) no-repeat
+      center/cover;
+    height: 50vh;
+  }
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 1rem;
+}
+p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+@media screen and (min-width: 992px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Main Styles */
+.section-center {
+  display: grid;
+  place-items: center;
+  margin: 4.4375rem 1.5rem;
+  background-color: #ffffff;
+  border-radius: var(--radius);
+}
+/* Image */
+.hero {
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+/* Text State */
+.container {
+  padding: 2.25rem 1.5rem;
+  text-align: center;
+}
+.title {
+  margin-bottom: 1.5rem;
+  font-weight: 900;
+  line-height: 1;
+}
+.info {
+  color: var(--clr-desaturated-blue);
+}
+/* Plan State */
+.plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--clr-very-pale-blue);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+.plan-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.plan-img {
+  width: 3rem !important;
+  height: 3rem;
+}
+.plan-text {
+  margin-top: 0.5rem;
+  margin-left: 1.25rem;
+}
+.plan-price {
+  color: var(--clr-desaturated-blue);
+}
+.btn-plan {
+  text-decoration: underline;
+  color: #463aa8;
+}
+/* Buttons Line */
+.btn {
+  display: block;
+  padding: 1rem 4rem;
+  margin-top: 1rem;
+  border-radius: var(--radius);
+}
+.btn-pay {
+  background-color: #382ae1;
+  color: #382ae1;
+}
+/* Footer */
 .attribution {
   font-size: 11px;
   text-align: center;

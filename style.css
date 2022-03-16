@@ -84,9 +84,11 @@ p {
 }
 
 /* Main Styles */
-.section-center {
+.section {
   display: grid;
   place-items: center;
+}
+.section-center {
   margin: 4.4375rem 1.5rem;
   background-color: #ffffff;
   border-radius: var(--radius);
@@ -137,6 +139,11 @@ p {
 .btn-plan {
   text-decoration: underline;
   color: #463aa8;
+  transition: var(--transition);
+}
+.btn-plan:hover {
+  color: #766cf1;
+  text-decoration: none;
 }
 /* Buttons Line */
 .btn {
@@ -146,8 +153,20 @@ p {
   border-radius: var(--radius);
 }
 .btn-pay {
-  background-color: #382ae1;
-  color: #382ae1;
+  background-color: rgb(56, 42, 225); /*382AE1*/
+  color: var(--clr-primary-1);
+  box-shadow: 5px 5px 5px rgba(56, 42, 225, 0.5);
+  transition: var(--transition);
+}
+.btn-pay:hover {
+  background-color: #766cf1;
+}
+.btn-cancel {
+  color: var(--clr-desaturated-blue);
+  transition: var(--transition);
+}
+.btn-cancel:hover {
+  color: #12203d;
 }
 /* Footer */
 .attribution {
@@ -156,4 +175,9 @@ p {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+@media screen and (min-width: 992px) {
+  .section-center {
+    margin: 6.375rem 30.9375rem;
+  }
 }
